@@ -1,0 +1,208 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #2a9d8f;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+header .btn {
+    background-color: #e9c46a;
+    color: #333;
+    padding: 12px 24px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+header .btn:hover {
+    background-color: #f4a261;
+    color: #fff;
+}
+
+/* Section Containers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #264653;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #e76f51;
+    margin: 10px auto 0;
+}
+
+/* Projects Section */
+#projects {
+    padding-top: 40px;           /* Add some top padding for spacing */
+    margin-bottom: 40px;         /* Add margin below the projects section */
+}
+
+#projects h2 {
+    font-size: 2.5rem;           /* Font size for the header */
+    color: #264653;              /* Header color */
+    text-align: center;          /* Center align the header */
+    margin-bottom: 20px;         /* Space below the header */
+    position: relative;
+}
+
+.container {
+    display: flex;               /* Use flexbox for layout */
+    flex-wrap: wrap;            /* Allow wrapping to the next line */
+    justify-content: space-between; /* Distribute space evenly between items */
+    max-width: 1200px;          /* Set a max width for the container */
+    margin: 0 auto;             /* Center the container */
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.33% - 20px); /* Set to 33.33% width minus margin space */
+    margin: 10px;                /* Add margin around each project */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;               /* Flexbox for content alignment */
+    flex-direction: column;      /* Stack content vertically */
+    justify-content: space-between; /* Space between title and description */
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    color: #264653;
+    margin-bottom: 15px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+
+
+/* Skills Section */
+#skills {
+    background-color: #264653;
+    padding: 50px 0;
+    color: #fff;
+}
+
+#skills h2 {
+    color: #fff;
+}
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#skills ul li {
+    background-color: #e9c46a;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 10px;
+    font-weight: bold;
+    color: #264653;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    margin: 50px 0;
+    background-color: #e9c46a;
+    padding: 30px 0;
+    border-radius: 12px;
+}
+
+#contact p {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+#contact a {
+    text-decoration: none;
+    color: #2a9d8f;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#contact a:hover {
+    color: #264653;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #264653;
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    #projects .project {
+        flex: 1 1 calc(50% - 20px); /* On medium screens, display 2 projects per row */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    #projects .project {
+        flex: 1 1 100%;  /* On smaller screens, display 1 project per row */
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+}
